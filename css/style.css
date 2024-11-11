@@ -27,7 +27,7 @@ body{
   }
   main{
     grid-area:ma;
-    background-color: orange;
+    background-color: greenyellow;
   }
   footer{
     grid-area:fo;
