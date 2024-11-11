@@ -1,0 +1,46 @@
+body{
+    height: 100vh;
+  }
+  
+  header{
+    grid-area: he;
+  }
+
+  h1{
+    grid-area:h1;
+    font-size: 40px;
+    font-weight: 500;
+    font-family: 'Montserrat', serif;
+    text-align: center;
+    margin-top: 8px;
+  }
+  nav{
+    grid-area:na;
+      display: flex;
+      font-size: 25px;
+      text-align: center;
+      margin-top: 15px;
+  }
+  aside{
+    grid-area:as;
+    background-color: grey;
+  }
+  main{
+    grid-area:ma;
+    background-color: orange;
+  }
+  footer{
+    grid-area:fo;
+    background-color: blue;
+  }
+  #wrapper{
+  height:100%;
+  display:grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 10% 30% 55% 5%;
+  grid-template-areas:
+      "he h1 h1 na"
+      "ma ma ma ma"
+      "as as as as"
+      "fo fo fo fo";
+  }
