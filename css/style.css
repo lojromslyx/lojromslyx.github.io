@@ -12,25 +12,68 @@ body{
     font-weight: 500;
     font-family: 'Montserrat', serif;
     text-align: center;
-    margin-top: 8px;
+    margin-top: 12px;
   }
 
   nav{
-    grid-area:na;
-      display: flex;
-      font-size: 25px;
-      text-align: center;
-      margin-top: 15px;
+    grid-area: na;
   }
+
+  nav ul {
+    list-style: none;
+    padding-left: 70px;
+    margin-top: 30px;
+    display: flex;
+    gap: 20px; 
+  }
+
+  nav ul li a {
+    color: black; 
+    text-decoration: none; 
+    font-size: 27px; 
+}
+
+nav ul li a:hover {
+    color: gray;
+}
 
   main{
     grid-area:ma;
-    background-color: aqua;
+    background-image: url('../bilder/rom-main.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+    text-align: center;
+  }
+
+  .intro-text {
+    font-size: 65px;
+    margin-bottom: 30px;
+    font-family: 'Montserrat', serif;
+  }
+
+  .produkt-button{
+    padding: 5px 50px;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+    background-color: #FFCFCF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
   }
 
   aside{
     grid-area:as;
-    background-color: grey;
   }
 
   footer{
@@ -49,3 +92,19 @@ body{
       "as as as"
       "fo fo fo";
   }
+
+
+
+  @media screen and (max-width:700px){
+
+    #wrapper{
+      height:500%;
+      grid-template-rows: 3% 5% 50% 5%;
+      grid-template-areas:
+          "he h1 na"
+          "ma ma ma"
+          "as as as"
+          "fo fo fo";
+      }
+    
+    }
