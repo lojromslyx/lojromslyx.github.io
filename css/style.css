@@ -1,89 +1,196 @@
-body{
-    height: 110vh;
-  }
-  
-  header{
-    grid-area: he;
-  }
+body {
+  height: 140vh;
+}
 
-  h1{
-    grid-area:h1;
-    font-size: 40px;
-    font-weight: 500;
-    font-family: 'Montserrat', serif;
-    text-align: center;
-    margin-top: 12px;
-  }
+header {
+  grid-area: he;
+}
 
-  nav{
-    grid-area: na;
-  }
+h1 {
+  grid-area: h1;
+  font-size: 40px;
+  font-weight: 500;
+  font-family: 'Montserrat', serif;
+  text-align: center;
+  margin-top: 14px;
+}
 
-  nav ul {
-    list-style: none;
-    padding-left: 70px;
-    margin-top: 30px;
-    display: flex;
-    gap: 20px; 
-  }
+nav {
+  grid-area: na;
+}
 
-  nav ul li a {
-    color: black; 
-    text-decoration: none; 
-    font-size: 28px; 
+nav ul {
+  list-style: none;
+  padding-left: 70px;
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 28px;
 }
 
 nav ul li a:hover {
-    color: gray;
+  color: gray;
 }
 
-  main{
-    grid-area:ma;
-    background-image: url('../bilder/rom-main.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 1rem;
-    overflow: hidden;
-    position: relative;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    color: white;
-    text-align: center;
-  }
+main {
+  grid-area: ma;
+  background-image: url('../bilder/rom-main.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
 
-  .intro-text {
-    font-size: 65px;
-    margin-bottom: 30px;
-    font-family: 'Montserrat', serif;
-  }
+.intro-text {
+  font-size: 65px;
+  margin-bottom: 30px;
+  font-family: 'Montserrat', serif;
+}
 
-  .produkt-button{
-    padding: 5px 50px;
-    font-size: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: black;
-    background-color: #FFCFCF;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+.produkt-button {
+  padding: 5px 50px;
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: black;
+  background-color: #FFCFCF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
-  aside{
-    grid-area:as;
-  }
+aside {
+  grid-area: as;
+  background-image: url('../bilder/pexels-fotios-photos-1181902.jpg');
+  background-position: left;
+  background-repeat: no-repeat;
+  margin-left: 20px;
+  position: relative;
+}
 
-  footer{
-    grid-area:fo;
-    background-color: blue;
-  }
+.om-oss-button {
+  position: absolute;
+  bottom: 108px;
+  padding: 10px 233px;
+  font-size: 20px;
+  font-family: 'Montserrat', serif;
+  color: white;
+  background-color: #FF7F7F;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+}
 
-  #wrapper{
-  height:100%;
-  display:grid;
+.om-oss-button:hover {
+  background-color: #FF4C4C;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 500;
+  font-family: 'Montserrat', serif;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.Main-text {
+  width: 55%;
+  height: 57%;
+  position: relative;
+  background-color: #FFCFCF;
+  margin-left: 660px;
+  bottom: 10px;
+  border-radius: 1rem;
+  font-size: 25px;
+  text-align: center;
+  padding-top: 30px;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  grid-area: fo; 
+  background-color: #f2f2f2;
+  padding: 20px 0;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 400px;
+}
+
+.recension-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  overflow: visible;
+}
+
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.recension-karusell {
+  display: flex; /* Flexbox for horizontal alignment */
+  gap: 20px; /* Space between items */
+  overflow-x: scroll; /* Horizontal scroll */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  padding-bottom: 20px;
+  width: 100%; /* Full width */
+  justify-content: flex-start; /* Align items to the left */
+  flex-wrap: nowrap; /* Prevents wrapping to next line */
+  box-sizing: border-box; /* Ensures padding and borders are included in width */
+}
+
+.recension {
+  flex-shrink: 0; /* Prevent shrinking */
+  min-width: 300px; /* Minimum width for items */
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease;
+  min-height: 150px; /* Minimum height for items */
+}
+
+
+
+.recension span {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  font-style: italic;
+}
+
+#wrapper {
+  height: 100%;
+  position: relative;
+  display: grid;
   grid-template-columns: 25% 50% 25%;
   grid-template-rows: 12% 28% 55% 5%;
   grid-template-areas:
@@ -91,20 +198,10 @@ nav ul li a:hover {
       "ma ma ma"
       "as as as"
       "fo fo fo";
+}
+
+@media (max-width: 768px) {
+  .recension {
+      min-width: 80%;
   }
-
-
-
-  @media screen and (max-width:700px){
-
-    #wrapper{
-      height:500%;
-      grid-template-rows: 3% 5% 50% 5%;
-      grid-template-areas:
-          "he h1 na"
-          "ma ma ma"
-          "as as as"
-          "fo fo fo";
-      }
-    
-    }
+}
