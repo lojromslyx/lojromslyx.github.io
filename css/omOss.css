@@ -1,0 +1,167 @@
+body {
+    height: 140vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', serif;
+    line-height: 1.6;
+  }
+  
+  #wrapper {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 12% 15% 58% 10%;
+    grid-template-areas:
+        "he h1 na"
+        "h2 h2 h2"
+        "ma ma ma"
+        "fo fo fo";
+  }
+  
+  /* Styles for larger screens */
+  header {
+    grid-area: he;
+  }
+  
+  h1 {
+    grid-area: h1;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  h1 a {
+    color: inherit; 
+    text-decoration: none; 
+  }
+  
+  h1 a:hover {
+    color: gray; 
+  }
+  
+  nav {
+    grid-area: na;
+    position: relative; /* Needed for absolute positioning */
+  }
+  
+  nav ul {
+    list-style: none;
+    padding-left: 70px;
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 28px;
+    transition: color 0.3s;
+    white-space: nowrap; /* Ensure the text stays on one line */
+  }
+  
+  nav ul li a:hover {
+    color: gray;
+  }
+  
+  h2 {
+    grid-area: h2;
+    background-color: #FFCFCF;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    padding-top: 10px;
+    text-align: center;
+  }
+  
+  main {
+    grid-area: ma;
+    width: 70%;
+    height: 80%;
+    margin: 0 auto; 
+    margin-top: 32px;
+    background-color: #FFCFCF;
+    border-radius: 1rem;
+    font-size: 28px;
+    text-align: center;
+    padding-bottom: 30px;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+footer{
+    grid-area: fo;
+    background-color: #FFCFCF;
+    border-radius: 1rem;
+}
+
+  /* Media queries for smaller screens */
+  @media (max-width: 768px) {
+    #wrapper {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+          "he na"
+          "h2"
+          "ma"
+          "fo";
+    }
+  
+    h1 {
+      display: none; /* Hide h1 on smaller screens */
+    }
+  
+    header {
+      justify-content: left; /* Move the header logo to the left */
+    }
+  
+    nav {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      text-align: right; /* Position nav to the right */
+    }
+  
+    nav ul {
+      flex-direction: row; /* Make the links in a line */
+      display: none; /* Hide by default on smaller screens */
+      padding-left: 0;
+      position: absolute;
+      top: 10px;
+      right: calc(100% + 20px); /* Make the links come out to the left, aligning with header */
+      padding: 10px; /* Add padding for more space */
+    }
+  
+    nav ul.show {
+      display: flex; /* Show when hamburger menu is activated */
+    }
+  
+    .hamburger {
+      display: block;
+      cursor: pointer;
+      font-size: 24px;
+      padding: 10px;
+      background-color: #FFCFCF;
+      border: none;
+      text-align: center;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+  
+    main {
+      width: 90%;
+      height: auto;
+      margin: 0 auto; /* Center the main content on smaller screens */
+    }
+  }
+  
+  /* Remove the hamburger menu on larger screens */
+  @media (min-width: 769px) {
+    .hamburger {
+      display: none; /* Hide the hamburger menu */
+    }
+  }
+  
