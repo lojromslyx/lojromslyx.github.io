@@ -178,7 +178,6 @@ main {
 }
 
 
-  /* Media queries for smaller screens */
   @media (max-width: 768px) {
     #wrapper {
       grid-template-columns: 1fr;
@@ -191,32 +190,32 @@ main {
     }
   
     h1 {
-      display: none; /* Hide h1 on smaller screens */
+      display: none; 
     }
   
     header {
-      justify-content: left; /* Move the header logo to the left */
+      justify-content: left; 
     }
   
     nav {
       position: absolute;
       top: 10px;
       right: 10px;
-      text-align: right; /* Position nav to the right */
+      text-align: right; 
     }
   
     nav ul {
-      flex-direction: row; /* Make the links in a line */
-      display: none; /* Hide by default on smaller screens */
+      flex-direction: row;
+      display: none; 
       padding-left: 0;
       position: absolute;
       top: 10px;
-      right: calc(100% + 20px); /* Make the links come out to the left, aligning with header */
-      padding: 10px; /* Add padding for more space */
+      right: calc(100% + 20px); 
+      padding: 10px; 
     }
   
     nav ul.show {
-      display: flex; /* Show when hamburger menu is activated */
+      display: flex; 
     }
   
     .hamburger {
@@ -235,7 +234,7 @@ main {
     main {
       width: 90%;
       height: auto;
-      margin: 0 auto; /* Center the main content on smaller screens */
+      margin: 0 auto; 
     }
   }
   

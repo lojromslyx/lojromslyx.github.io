@@ -1,4 +1,4 @@
-/* Base styles */
+
 body {
   height: 140vh;
   margin: 0;
@@ -7,7 +7,7 @@ body {
   line-height: 1.6;
 }
 
-/* Main grid layout for desktop */
+
 #wrapper {
   height: 100%;
   display: grid;
@@ -20,12 +20,12 @@ body {
     "fo fo fo";
 }
 
-/* Header section */
+
 header {
   grid-area: he;
 }
 
-/* Main heading styles */
+
 h1 {
   grid-area: h1;
   font-size: 40px;
@@ -43,7 +43,7 @@ h1 a:hover {
   color: gray;
 }
 
-/* Navigation styles */
+
 nav {
   grid-area: na;
   position: relative;
@@ -69,7 +69,7 @@ nav ul li a:hover {
   color: gray;
 }
 
-/* Main content styles */
+
 main {
   grid-area: ma;
   background-image: url('../bilder/rom-main.png');
@@ -110,7 +110,7 @@ main {
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Sidebar styles for desktop */
+
 aside {
   grid-area: as;
   background-image: url('../bilder/pexels-fotios-photos-1181902.jpg');
@@ -122,7 +122,7 @@ aside {
 
 .om-oss-button {
   position: absolute;
-  bottom: 69px; /* Keeping it the same for desktop view */
+  bottom: 69px; 
   padding: 10px 230px;
   font-size: 20px;
   color: white;
@@ -138,7 +138,6 @@ aside {
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Main text styles */
 .Main-text {
   width: 55%;
   height: 60%;
@@ -171,7 +170,7 @@ h3 {
   color: black;
 }
 
-/* Footer styles */
+
 footer {
   grid-area: fo;
   padding: 20px 0;
@@ -224,7 +223,7 @@ footer {
   font-style: italic;
 }
 
-/* Mobile styles */
+
 @media (max-width: 768px) {
   #wrapper {
     grid-template-columns: 1fr;
@@ -282,9 +281,9 @@ footer {
   main {
     width: 100%;
     height: auto;
-    min-height: 250px; /* Made 'ma' smaller */
+    min-height: 250px; 
     margin: 0 auto;
-    background-image: url('../bilder/rom-main.png'); /* Added picture back */
+    background-image: url('../bilder/rom-main.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -312,7 +311,7 @@ footer {
 
   aside {
     width: 100%;
-    margin: 0; /* Removed margin-top */
+    margin: 0; 
     padding: 10px;
     background: none;
     display: flex;
@@ -332,10 +331,10 @@ footer {
   .om-oss-button {
     padding: 10px;
     width: 100%;
-    position: static;
-    margin-top: 2px; /* Moved button higher up in mobile view */
-    text-transform: uppercase;
     height: 30%;
+    position: static;
+    margin-top: 2px; 
+    text-transform: uppercase;
   }
 
   footer {
@@ -354,7 +353,6 @@ footer {
   }
 }
 
-/* Media queries for larger screens */
 @media (min-width: 769px) {
   .hamburger {
     display: none;
