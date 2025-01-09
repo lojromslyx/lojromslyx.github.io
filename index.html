@@ -13,6 +13,7 @@
 
         <header> <a href="index.html"> <img src="bilder/emils_löjrom120px.png" alt="Emils Löjrom logga" style="transform: translate(0px,-1px);">  </a> </header>
         <h1> <a href="index.html">Emils Löjrom</a> </h1>
+        <button class="hamburger">☰</button>
         <nav>
             <ul>
                 <li> <a href="omOss.html">Om oss</a> </li>
@@ -25,7 +26,7 @@
         </nav>
         <main> 
             <p class="intro-text">Gillar du löjrom av bästa kvalité?</p>
-            <button class="produkt-button">Visa produkter</button> 
+            <button class="produkt-button" onclick="window.location.href='produkter.html'">Visa produkt</button> 
         </main>
         <aside>
             <h2>Vilka är vi?</h2>
@@ -34,7 +35,7 @@
                 Med sin silkeslena konsistens och utsökta smak har vår löjrom blivit en symbol för lyx och exklusivitet. Perfekt för festliga tillfällen och finare middagar, Emils Löjrom är valet för dig som uppskattar det bästa. Från elegant garnering till huvudroll i en rätt – vår löjrom förhöjer varje smakupplevelse.
                 Upptäck smaken av äkta lyx med Emils Löjrom.
             </p>
-            <button class="om-oss-button">Om oss</button>
+            <button class="om-oss-button" onclick="window.location.href='omOss.html'">Om oss</button>
         </aside>
         <footer>
             <div class="recension-container">
@@ -71,6 +72,7 @@
                 </div>
             </div>
         </footer>
-        <script src="js/script.js"></script>        
+        <script src="js/script.js"></script>    
+        <script src="js/hamburger.js"></script>    
 </body>
 </html>

@@ -158,10 +158,10 @@ footer{
     }
   }
   
-  /* Remove the hamburger menu on larger screens */
+  
   @media (min-width: 769px) {
     .hamburger {
-      display: none; /* Hide the hamburger menu */
+      display: none; 
     }
   }
   
