@@ -3,20 +3,24 @@ body {
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 #wrapper {
-    height: 100vh;
     display: grid;
     grid-template-columns: 25% 50% 25%;
-    grid-template-rows: 10% 15% auto 10%;
+    grid-template-rows: 12% 15% 58% 10%;
     grid-template-areas:
         "he h1 na"
         "h2 h2 h2"
         "ma ma ma"
         "fo fo fo";
+    flex: 1;
 }
 
+/* bild emils löjrom och sidans namn */
 header {
     grid-area: he;
     margin: 0;
@@ -29,6 +33,7 @@ h1 {
     font-weight: 500;
     text-align: center;
     margin-top: 20px;
+    font-family: 'Montserrat', serif;
 }
 
 h1 a {
@@ -40,6 +45,7 @@ h1 a:hover {
     color: gray; 
 }
 
+/* navigations fältet*/
 nav {
     grid-area: na;
     position: relative;
@@ -59,12 +65,14 @@ nav ul li a {
     font-size: 28px;
     transition: color 0.3s;
     white-space: nowrap;
+    font-family: 'Montserrat', serif;
 }
 
 nav ul li a:hover {
     color: gray;
 }
 
+/* main yta för prodkt */
 main {
     grid-area: ma;
     display: flex;
@@ -75,8 +83,10 @@ main {
     border: 2px solid #ccc;
     border-radius: 10px;
     padding: 20px;
+    margin-bottom: 20px;
 }
 
+/* produkt bild och detaljer*/
 .product-image img {
     max-width: 400px;
     height: auto;
@@ -138,6 +148,22 @@ main {
     background-color: #555;
 }
 
+/* Footer styling */
+footer {
+    grid-area: fo;
+    background-color: #ffcfcf62;
+    border-radius: none;
+    font-size: 19px;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto; 
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* mobil anpassning */
 @media (max-width: 768px) {
     #wrapper {
         grid-template-columns: 1fr;
@@ -200,6 +226,7 @@ main {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin-bottom: 20px; 
     }
     
     .product-image img {
