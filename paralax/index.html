@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PorscheParalax</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section>
+        <img src="bilder/bakgrund.jpg" id="background">
+        <img src="bilder/porschebild2.png" id="logo">
+        <img src="bilder/porsche.png" id="car">
+    </section>
+
+    <script type="text/javascript">
+        let background = document.getElementById("background");
+        let logo = document.getElementById("logo");
+        let car = document.getElementById("car");
+
+        window.addEventListener('scroll', function(){
+            var value = window.scrollY;
+            background.style.top = value * 0.5 + 'px';
+            logo.style.top = -value * 0.6 + 'px';
+            car.style.left = value * 1 + 'px';
+        })
+    </script>
+</body>
+</html>
