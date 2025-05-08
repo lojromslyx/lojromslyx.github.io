@@ -1,0 +1,254 @@
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', serif;
+    line-height: 1.6;
+    background-color: rgb(46, 46, 46);
+  }
+
+  #wrapper {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "he h1 na"
+      "ma ma ma"
+      "fo fo fo";
+}
+
+header{
+    grid-area: he;
+  }
+
+  h1 {
+    grid-area: h1;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+  }
+  
+  h1 a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  h1 a:hover {
+    color: gray;
+  }
+
+  /*påverkar alla ankartaggar som ligger i nav*/
+nav {
+    grid-area: na;
+    position: relative;
+  }
+  
+  nav ul { 
+    list-style: none;
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 28px;
+    transition: color 0.3s;
+    white-space: nowrap;
+  }
+  
+  nav ul li a:hover {
+    color: gray;
+  }
+
+  main {
+    position: relative;
+    width: 95%;
+    padding: 10px;
+    grid-area: ma;
+    display: flex;
+    justify-content: center; 
+}
+
+
+h2 {
+  position: absolute;
+  border-right: solid 3px rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Source Code Pro', monospace;  
+  font-size: 28px;
+  color: rgba(255, 255, 255, 0.967);
+}
+
+/* Animation */
+h2 {
+  animation: animated-text 4s steps(29,end) 1s 1 normal both,
+             animated-cursor 600ms steps(29,end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 660px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: rgba(255, 255, 255, 0.75);}
+  to{border-right-color: transparent;}
+}
+
+img {
+    border-radius: 5px; 
+    transition: 0.5s; /*animerar insomning på bilderna när man drar musen över */
+}
+
+.gallery {
+  margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    height: 380px;
+    margin: 50px;
+    box-shadow: 5px 5px 20px black;
+    overflow: hidden;
+    position: relative;
+}
+
+.description {
+    height: 60px;
+    width: 250px;
+    padding: 6px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 10px;
+    color: #FFF;
+    transition: 0.5s;
+}
+
+.årtal {
+    margin: 10px;
+    font-size: 30px;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.card:hover .description {
+    height: 200px;
+    bottom: -4px;
+    background: black;
+}
+
+.card:hover p {
+    opacity: 1;
+    visibility: visible;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+
+  footer {
+    background-color: #2c2c2c;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    grid-area: fo;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .footer-content p {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .footer-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .footer-nav ul li a:hover {
+    color: gray;
+  }
+  
+  .hamburger-menu {
+    display: none; /* Dölj hamburger-menyn som standard */
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 20px; /* Placera hamburger-ikonen högst upp */
+    left: 20px; /* Placera hamburger-ikonen längst till vänster */
+    z-index: 1000; /* Säkerställ att ikonen ligger ovanpå andra element */
+  }
+  
+  /* När skärmen är smalare än 768px, visa hamburger-ikonen och dölja menyn */
+  @media (max-width: 768px) {
+    #nav-list {
+      display: none; /* Dölj menyn initialt */
+      flex-direction: column;
+      width: 100%;
+      background-color: #333;
+      position: absolute;
+      top: 60px; /* Justera för att menyn ska dyka upp strax under navbaren */
+      left: 0;
+      padding: 10px 0;
+      z-index: 999; /* Se till att menyn inte döljs bakom andra element */
+    }
+  
+    #nav-list li {
+      text-align: center;
+      margin: 10px 0;
+    }
+  
+    #nav-list li a {
+      font-size: 24px;
+      padding: 10px 20px;
+      display: block;
+      color: white; /* Lägg till en färg på länkarna */
+      text-decoration: none;
+    }
+  
+    /* När menyn är aktiv, visa den */
+    #nav-list.active {
+      display: block;
+    }
+  
+    /* Flytta hamburger-ikonen till övre högra hörnet */
+    .hamburger-menu {
+      display: block; /* Visa hamburger-menyn på små skärmar */
+      top: 20px; /* Håll ikonen högst upp */
+      right: 20px; /* Placera ikonen längst till höger */
+      left: unset; /* Ta bort vänsterjusteringen */
+    }
+  }

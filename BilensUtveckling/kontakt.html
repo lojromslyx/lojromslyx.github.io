@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kontakta oss om du har frågor eller vill veta mer om vårt arbete med bilens utveckling genom historien. Vi ser fram emot att höra från dig!" />
+    <title>Om oss</title>
+    <link rel="stylesheet" href="css/kontakt.css">
+</head>
+<body>
+    <div id="wrapper">
+      <header> <a href="index.html"> <img src="bilder/bilensutvecklingLogo2.png" alt="Bilens utveckling logga" style="transform: translate(6px, 9px);">  </a> </header>
+      <h1> <a href="utveckling.html">Bilens utveckling</a> </h1>
+      <div class="hamburger-menu" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger-ikon -->
+      <nav>
+        <ul id="nav-list">
+            <li> <a href="omOss.html">Om oss</a> </li>
+            <li> <a href="kontakt.html">Kontakt</a> </li>
+            <li> <a href="index.html">Startsida</a> </li>
+        </ul>
+    </nav>
+
+        <main>
+            <div class="kontakt">
+              <div class="container">
+                <h2>Kontakta oss</h2>
+                <p>Har du frågor om vår fakta eller vill veta mer om bilens utveckling? Vi finns här för att hjälpa dig!</p>
+                
+                <div class="contact-info">
+                  <div class="contact-info-item">
+                    <div class="contact-info-content">
+                      <h4>Email</h4>
+                      <p>info@bilensutveckling.se</p>
+                    </div>
+                  </div>
+                </div>
+          
+                <div class="contact-form">
+                  <form action="" id="contact-form">
+                    <h2>Skicka ett meddelande</h2>
+                    <div class="input-box">
+                      <input type="text" required name="name">
+                      <span>Ditt namn</span>
+                    </div>
+                    
+                    <div class="input-box">
+                      <input type="email" required name="email">
+                      <span>Email</span>
+                    </div>
+                    
+                    <div class="input-box">
+                      <textarea required name="message"></textarea>
+                      <span>Ditt meddelande...</span>
+                    </div>
+                    
+                    <div class="input-box">
+                      <input type="submit" value="Skicka">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </main>
+          
+
+        <footer>
+            <div class="footer-content">
+                <p>© 2025 Emil Drevander | Denna webbplats är skapad som ett skolarbete.</p>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="index.html">Startsida</a></li>
+                        <li><a href="omOss.html">Om oss</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>     
+    <script src="Java/hamburger.js"></script> 
+</body>
+</html>

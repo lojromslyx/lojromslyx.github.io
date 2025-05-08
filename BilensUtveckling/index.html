@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Följ bilens utveckling från de första ångdrivna vagnarna till dagens självkörande elbilar. Utforska historien och framtiden för bilindustrin.">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bilens utveckling</title>
+</head>
+<body>
+    <div id="wrapper">
+        <header> 
+            <a href="index.html"> 
+                <img src="bilder/bilensutvecklingLogo2.png" alt="Bilens utveckling logga" style="transform: translate(6px, 9px);">  
+            </a> 
+        </header>
+        <h1> <a href="utveckling.html">Bilens utveckling</a> </h1>
+        <nav>
+            <div class="hamburger-menu" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger-ikon -->
+            <ul id="nav-list">
+                <li> <a href="omOss.html">Om oss</a> </li>
+                <li> <a href="kontakt.html">Kontakt</a> </li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="slider-outer">
+                <h1 class="Title">EN TIDSRESA PÅ FYRA HJUL</h1>
+                <button class="Button1" onclick="window.location.href='utveckling.html'">UTFORSKA UTVECKLINGEN!</button> 
+                <div class="InformationText">Från de första ångdrivna vagnarna på 1700-talet till dagens självkörande elbilar har bilen genomgått en otrolig resa. 1886 byggde Karl Benz världens första bensindrivna bil, vilket blev startskottet för en ny era av transport. Under 1900-talet utvecklades bilarna snabbt – från enkla handbyggda fordon till massproducerade modeller som förändrade världen. Idag fortsätter bilens utveckling med fokus på hållbarhet, teknik och innovation, där eldrift och smarta system formar framtidens mobilitet.</div>
+                <div class="slider-inner">
+                    <img src="bilder/car.png" alt="Första bil" class="active">
+                    <img src="bilder/car2.jpg" alt="Nyare bil">
+                    <img src="bilder/car3.jpg" alt="Nyare bil">
+                    <img src="bilder/car4.jpg" alt="Nyare bil">
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>© 2025 Emil Drevander | Denna webbplats är skapad som ett skolarbete.</p>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="index.html">Startsida</a></li>
+                        <li><a href="omOss.html">Om oss</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
+
+    <script src="Java/slider.js"></script>
+    <script src="Java/hamburger.js"></script>
+</body>
+</html>
