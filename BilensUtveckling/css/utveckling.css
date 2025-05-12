@@ -22,6 +22,10 @@ header{
     grid-area: he;
   }
 
+  #imagelogo{
+    transform: translate(6px, 9px);
+  }
+
   h1 {
     grid-area: h1;
     font-size: 40px;
