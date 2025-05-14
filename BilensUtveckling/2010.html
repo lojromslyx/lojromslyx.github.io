@@ -3,22 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Upptäck 1960-talets bilar – muskelbilar, kromdetaljer och tekniska framsteg som speglade frihet och stil. En ikonisk era inom bilindustrin." />
     <title>Om oss</title>
     <link rel="stylesheet" href="css/2010.css">
 </head>
 <body>
     <div id="wrapper">
-        <header> <a href="index.html"> <img src="bilder/bilensutvecklingLogo2.png" alt="Bilens utveckling logga" style="transform: translate(6px, 9px);">  </a> </header>
+        <header> <a href="index.html"> <i class="sprite sprite-BilensutvecklingLogo2"></i> </a> </header>
         <h1> <a href="utveckling.html">Bilens utveckling</a> </h1>
-        <div class="hamburger-menu" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger-ikon -->
         <nav>
-            <ul id="nav-list">
-                <li> <a href="omOss.html">Om oss</a> </li>
-                <li> <a href="kontakt.html">Kontakt</a> </li>
-                <li> <a href="index.html">Startsida</a> </li>
-            </ul>
-        </nav>
+            <div class="hamburger-menu" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger-ikon -->
+              <ul id="nav-list">
+                  <li> <a href="omOss.html">Om oss</a> </li>
+                  <li> <a href="kontakt.html">Kontakt</a> </li>
+                  <li> <a href="index.html">Startsida</a> </li>
+              </ul>
+            </nav>
 
+        <main>
+            <section class="intro">
+                <div class="intro-content">
+                  <img src="bilder/2010bil.png" alt="2010-tal bil">
+                  <div class="intro-text">
+                    <h2>2010-talets bilrevolution</h2>
+                    <p>Under 2010-talet tog bilindustrin stora kliv mot en mer uppkopplad, säker och miljövänlig framtid. Funktioner som backkamera, autobroms och pekskärmar blev standard, samtidigt som hybrider och elbilar som Tesla Model S satte en ny riktning för hela branschen. Det var ett årtionde där teknik mötte design – och bilen blev smartare än någonsin.</p>
+                  </div>
+                </div>
+              </section>              
+          
+            <section class="transition">
+                <h2>Från hästkrafter till mjukvara</h2>
+                <p>Där tidigare generationer fokuserade på motorkraft och design, försköts fokus under 2010-talet till digital teknik, säkerhet och hållbarhet. Bilar började kommunicera med både förare och omgivning, och gränsen mellan maskin och dator suddades ut allt mer.</p>
+            </section>
+          
+            <section class="framtid">
+                <div class="framtid-content">
+                  <div class="framtid-text">
+                    <h2>Mot framtiden: Självkörande och eldrivna fordon</h2>
+                    <p>2010-talet blev startskottet för det som ska bli nästa stora revolution inom bilvärlden. Självkörande teknologier började testas på allvar, och elbilar blev ett reellt alternativ till bensin och diesel. Vi gick från att köra bilen – till att bilen snart kan köra oss.</p>
+                  </div>
+                  <img src="bilder/2010framtid.png" alt="2010-talet bil och utveckling">
+                </div>
+              </section>              
+          </main>
+          
         <footer>
             <div class="footer-content">
                 <p>© 2025 Emil Drevander | Denna webbplats är skapad som ett skolarbete.</p>
@@ -28,10 +56,33 @@
                         <li><a href="omOss.html">Om oss</a></li>
                         <li><a href="kontakt.html">Kontakt</a></li>
                     </ul>
+
+                    <div class="navlogos">
+                        <div class="icon-text">
+                            <i class="sprite sprite-github"></i>
+                            <span>sidan hostas på github</span>
+                         </div>
+
+                        <div class="icon-text">
+                            <i class="sprite sprite-gmail"></i>
+                                <span>bilensutvekling@gmail.com</span>
+                        </div> 
+
+                        <div class="icon-text">
+                            <i class="sprite sprite-linkedin"></i>
+                                <span>@bilensutveckling</span>
+                        </div>        
+
+                        <div class="icon-text">
+                             <i class="sprite sprite-twitter"></i>
+                                <span>@bilensutveckling</span>
+                        </div>        
+                    </div>
                 </nav>
             </div>
         </footer>
-    </div>      
+    </div>  
+    
     <script src="Java/hamburger.js"></script>
 </body>
 </html>

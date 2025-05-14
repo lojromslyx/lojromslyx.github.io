@@ -1,158 +1,321 @@
 body {
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', serif;
-    line-height: 1.6;
-    background-color: rgb(46, 46, 46);
-  }
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', serif;
+  line-height: 1.6;
+  background-color: rgb(46, 46, 46);
+}
 
-  #wrapper {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 25% 50% 25%;
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas:
-      "he h1 na"
-      "ma ma ma"
-      "fo fo fo";
+#wrapper {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "he h1 na"
+    "ma ma ma"
+    "fo fo fo";
 }
 
 header{
-    grid-area: he;
-  }
+  grid-area: he;
+}
 
-  h1 {
-    grid-area: h1;
-    font-size: 40px;
-    font-weight: 500;
-    text-align: center;
-    margin-top: 20px;
-    color: white;
-  }
-  
-  h1 a {
-    color: inherit;
-    text-decoration: none;
-  }
-  
-  h1 a:hover {
-    color: gray;
-  }
+h1 {
+  grid-area: h1;
+  font-size: 40px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+}
 
-  /*påverkar alla ankartaggar som ligger i nav*/
+h1 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 a:hover {
+  color: gray;
+}
+
+/*påverkar alla ankartaggar som ligger i nav*/
 nav {
-    grid-area: na;
-    position: relative;
-  }
-  
-  nav ul { 
-    list-style: none;
-    margin-top: 30px;
+  grid-area: na;
+  position: relative;
+}
+
+nav ul { 
+  list-style: none;
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 28px;
+  transition: color 0.3s;
+  white-space: nowrap;
+}
+
+nav ul li a:hover {
+  color: gray;
+}
+
+main{
+  grid-area: ma;
+}
+
+section {
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+}
+
+section img {
+  height: auto;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.intro {
+  padding: 60px 20px;
+  background: radial-gradient(circle, #2c2c2c, #1a1a1a);
+  color: white;
+}
+
+.intro-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.intro-content img {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.intro-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.intro-text h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.intro-text p {
+  font-size: 23px;
+  line-height: 1.6;
+}
+
+.transition {
+  background: radial-gradient(circle, #444444, #1a1a1a);
+  color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.transition h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.transition p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.framtid {
+  background: radial-gradient(circle, #2c2c2c, #1a1a1a);
+  color: white;
+  padding: 60px 20px;
+}
+
+.framtid-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.framtid-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.framtid-text h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.framtid-text p {
+  font-size: 23px;
+  line-height: 1.6;
+}
+
+.framtid-content img {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}  
+
+footer {
+  background-color: #2c2c2c;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  grid-area: fo;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.footer-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding-left: 150px;
+  margin: 0;
+}
+
+.footer-nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.footer-nav ul li a:hover {
+  color: gray;
+}
+
+.hamburger-menu {
+  display: none; /* Dölj hamburger-menyn som standard */
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  top: 20px; /* Placera hamburger-ikonen högst upp */
+  left: 20px; /* Placera hamburger-ikonen längst till vänster */
+  z-index: 1000; /* Säkerställ att ikonen ligger ovanpå andra element */
+}
+
+  .navlogos {
     display: flex;
+    justify-content: center;
     gap: 20px;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 28px;
-    transition: color 0.3s;
-    white-space: nowrap;
-  }
-  
-  nav ul li a:hover {
-    color: gray;
-  }
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
 
-
-  footer {
-    background-color: #2c2c2c;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    grid-area: fo;
-  }
-  
-  .footer-content {
+.icon-text {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-  }
-  
-  .footer-content p {
-    margin: 0;
-    font-size: 16px;
-  }
-  
-  .footer-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .footer-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s;
-  }
-  
-  .footer-nav ul li a:hover {
-    color: gray;
-  }
-  
-  .hamburger-menu {
-    display: none; /* Dölj hamburger-menyn som standard */
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
+}
+
+.icon-text span {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 4px;
+    color: #ffffff;
+}
+
+.sprite {
+    background-image: url(../bilder/spritesheet2.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+/* Ikoner */
+.sprite-BilensutvecklingLogo2 {
+  width: 120px; 
+  height: 120px;
+  background-position: -4px -4px;
+}
+
+.sprite-github {
+    width: 30px;
+    height: 30px;
+    background-position: -135px -5px;
+}
+
+.sprite-gmail {
+    width: 30px;
+    height: 30px;
+    background-position: -135px -45px;
+}
+
+.sprite-linkedin {
+    width: 30px;
+    height: 30px;
+    background-position: -135px -85px;
+}
+
+.sprite-twitter {
+    width: 30px;
+    height: 30px;
+    background-position: -45px -165px;
+}
+
+/* När skärmen är smalare än 768px, visa hamburger-ikonen och dölja menyn */
+@media (max-width: 768px) {
+  #nav-list {
+    display: none; /* Dölj menyn initialt */
+    flex-direction: column;
+    width: 100%;
+    background-color: #333;
     position: absolute;
-    top: 20px; /* Placera hamburger-ikonen högst upp */
-    left: 20px; /* Placera hamburger-ikonen längst till vänster */
-    z-index: 1000; /* Säkerställ att ikonen ligger ovanpå andra element */
+    top: 60px; /* Justera för att menyn ska dyka upp strax under navbaren */
+    left: 0;
+    padding: 10px 0;
+    z-index: 999; /* Se till att menyn inte döljs bakom andra element */
   }
-  
-  /* När skärmen är smalare än 768px, visa hamburger-ikonen och dölja menyn */
-  @media (max-width: 768px) {
-    #nav-list {
-      display: none; /* Dölj menyn initialt */
-      flex-direction: column;
-      width: 100%;
-      background-color: #333;
-      position: absolute;
-      top: 60px; /* Justera för att menyn ska dyka upp strax under navbaren */
-      left: 0;
-      padding: 10px 0;
-      z-index: 999; /* Se till att menyn inte döljs bakom andra element */
-    }
-  
-    #nav-list li {
-      text-align: center;
-      margin: 10px 0;
-    }
-  
-    #nav-list li a {
-      font-size: 24px;
-      padding: 10px 20px;
-      display: block;
-      color: white; /* Lägg till en färg på länkarna */
-      text-decoration: none;
-    }
-  
-    /* När menyn är aktiv, visa den */
-    #nav-list.active {
-      display: block;
-    }
-  
-    /* Flytta hamburger-ikonen till övre högra hörnet */
-    .hamburger-menu {
-      display: block; /* Visa hamburger-menyn på små skärmar */
-      top: 20px; /* Håll ikonen högst upp */
-      right: 20px; /* Placera ikonen längst till höger */
-      left: unset; /* Ta bort vänsterjusteringen */
-    }
+
+  #nav-list li {
+    text-align: center;
+    margin: 10px 0;
   }
+
+  #nav-list li a {
+    font-size: 24px;
+    padding: 10px 20px;
+    display: block;
+    color: white; /* Lägg till en färg på länkarna */
+    text-decoration: none;
+  }
+
+  /* När menyn är aktiv, visa den */
+  #nav-list.active {
+    display: block;
+  }
+
+  /* Flytta hamburger-ikonen till övre högra hörnet */
+  .hamburger-menu {
+    display: block; /* Visa hamburger-menyn på små skärmar */
+    top: 20px; /* Håll ikonen högst upp */
+    right: 20px; /* Placera ikonen längst till höger */
+    left: unset; /* Ta bort vänsterjusteringen */
+  }
+}
